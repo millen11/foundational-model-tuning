@@ -1,0 +1,28 @@
+/home/millen11/anaconda3/envs/autoPeft-cambridge/lib/python3.9/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/home/millen11/anaconda3/envs/autoPeft-cambridge/lib/python3.9/site-packages/torch/nn/modules/loss.py:535: UserWarning: Using a target size (torch.Size([64, 96, 7])) that is different to the input size (torch.Size([64, 336, 7])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return F.mse_loss(input, target, reduction=self.reduction)
+The token has not been saved to the git credentials helper. Pass `add_to_git_credential=True` in this function directly or `--add-to-git-credential` if using via `huggingface-cli` if you want to set the git credential as well.
+Token is valid (permission: fineGrained).
+Your token has been saved to /home/millen11/.cache/huggingface/token
+Login successful
+Traceback (most recent call last):
+  File "/home/millen11/timeseries-fm-tuning/test.py", line 26, in <module>
+    outputs = model(
+  File "/home/millen11/anaconda3/envs/autoPeft-cambridge/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/millen11/anaconda3/envs/autoPeft-cambridge/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/millen11/anaconda3/envs/autoPeft-cambridge/lib/python3.9/site-packages/transformers/models/patchtst/modeling_patchtst.py", line 1758, in forward
+    loss_val = loss(y_hat_out, future_values)
+  File "/home/millen11/anaconda3/envs/autoPeft-cambridge/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/millen11/anaconda3/envs/autoPeft-cambridge/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/millen11/anaconda3/envs/autoPeft-cambridge/lib/python3.9/site-packages/torch/nn/modules/loss.py", line 535, in forward
+    return F.mse_loss(input, target, reduction=self.reduction)
+  File "/home/millen11/anaconda3/envs/autoPeft-cambridge/lib/python3.9/site-packages/torch/nn/functional.py", line 3365, in mse_loss
+    expanded_input, expanded_target = torch.broadcast_tensors(input, target)
+  File "/home/millen11/anaconda3/envs/autoPeft-cambridge/lib/python3.9/site-packages/torch/functional.py", line 76, in broadcast_tensors
+    return _VF.broadcast_tensors(tensors)  # type: ignore[attr-defined]
+RuntimeError: The size of tensor a (336) must match the size of tensor b (96) at non-singleton dimension 1
